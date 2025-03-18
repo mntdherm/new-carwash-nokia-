@@ -1,0 +1,198 @@
+---
+---
+
+<section id="meista" class="about">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Meistä</h2>
+      <p>Tutustu Nokia Autopesun tarinaan</p>
+    </div>
+    
+    <div class="about-content">
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1624884269715-70759892cd29?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nokia Autopesu henkilökunta" />
+        <div class="experience-badge">
+          <span class="years">10+</span>
+          <span class="text">Vuoden kokemus</span>
+        </div>
+      </div>
+      
+      <div class="about-text">
+        <h3>Ammattitaitoista autopesua jo vuodesta 2013</h3>
+        <p>Nokia Autopesu on perustettu intohimosta puhtaisiin autoihin ja laadukkaaseen asiakaspalveluun. Olemme erikoistuneet käsinpesuun, koska uskomme sen olevan paras tapa huolehtia autostasi.</p>
+        
+        <p>Tiimimme koostuu autoalan ammattilaisista, joilla on vuosien kokemus erilaisten ajoneuvojen pesusta ja puhdistuksesta. Käytämme vain parhaita pesuaineita ja työkaluja, jotka ovat hellävaraisia auton pinnalle mutta tehokkaita lian poistamisessa.</p>
+        
+        <div class="about-features">
+          <div class="feature">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>Ammattitaito</h4>
+              <p>Kokenut henkilökunta, jatkuva koulutus</p>
+            </div>
+          </div>
+          
+          <div class="feature">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>Luotettavuus</h4>
+              <p>Pidämme lupauksemme, arvostamme autoasi</p>
+            </div>
+          </div>
+          
+          <div class="feature">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>Keskeinen sijainti</h4>
+              <p>Helppo saapua, hyvät pysäköintitilat</p>
+            </div>
+          </div>
+        </div>
+        
+        <a href="#yhteystiedot" class="btn">Ota yhteyttä</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background-color: var(--color-background);
+  }
+  
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .about-image {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  
+  .about-image:hover img {
+    transform: scale(1.05);
+  }
+  
+  .experience-badge {
+    position: absolute;
+    bottom: 30px;
+    right: -20px;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .experience-badge .years {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  
+  .experience-badge .text {
+    font-size: 0.9rem;
+  }
+  
+  .about-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-dark);
+  }
+  
+  .about-text p {
+    margin-bottom: 1.5rem;
+    color: var(--color-gray-dark);
+  }
+  
+  .about-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .feature {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 50px;
+    background-color: rgba(var(--color-primary-rgb), 0.1);
+    border-radius: 50%;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+  }
+  
+  .feature:hover .feature-icon {
+    background-color: var(--color-primary);
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  .feature-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .feature-text h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark);
+  }
+  
+  .feature-text p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+  }
+  
+  @media (max-width: 992px) {
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    
+    .about-image {
+      order: 1;
+    }
+    
+    .about-text {
+      order: 2;
+    }
+  }
+</style>

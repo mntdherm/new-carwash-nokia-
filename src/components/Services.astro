@@ -1,0 +1,1236 @@
+---
+const services = [
+  {
+    title: "Ulko käsinpesu vahashampoo",
+    description: "Perusteellinen auton ulkopintojen käsinpesu laadukkaalla vahashampolla.",
+    duration: "25 min",
+    price: "25 €",
+    includes: "",
+    icon: "tool",
+    image: "https://images.unsplash.com/photo-1620323945317-93167ade7da8?q=80&w=3040&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    title: "Penkkien pesu",
+    description: "Auton penkkien perusteellinen puhdistus ja pesu erikoisaineilla.",
+    duration: "1 t",
+    price: "130 €",
+    includes: "",
+    icon: "layers",
+    image: "https://images.unsplash.com/photo-1565534384095-5d329610fa16?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    title: "Sisäpuhdistus",
+    description: "Auton sisätilojen kokonaisvaltainen puhdistus ja raikastus.",
+    duration: "50 min",
+    price: "40 €",
+    includes: "",
+    icon: "home",
+    image: "https://images.unsplash.com/photo-1605164596594-17f7e3120481?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    title: "TORNADO",
+    description: "Tehokas sisäpuhdistus tornado-menetelmällä.",
+    duration: "50 min",
+    price: "35 €",
+    includes: "Mattojen pesu, imurointi",
+    icon: "wind",
+    image: "https://images.unsplash.com/photo-1550564956-8f914edc0477?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    title: "TEHO Sisäpuhdistus",
+    description: "Kattava sisä- ja ulkopuhdistus, joka jättää autosi kuin uudeksi.",
+    duration: "1 t",
+    price: "60 €",
+    includes: "Ulkopesu, sisäpuhdistus, mattojen pesu, imurointi, ikkunoiden pesu, itiköiden poisto",
+    icon: "zap",
+    image: "https://images.unsplash.com/photo-1620323945317-93167ade7da8?q=80&w=3040&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    title: "Vahaus",
+    description: "Auton maalipinnan suojaus ja kiilto laadukkaalla vahalla.",
+    duration: "1 t",
+    price: "60 €",
+    includes: "Ulkopesu",
+    icon: "shield",
+    image: "https://images.unsplash.com/photo-1565534384095-5d329610fa16?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    title: "Kovavahaus",
+    description: "Pitkäkestoinen suoja autollesi kestävällä kovavahalla.",
+    duration: "1 t",
+    price: "99 €",
+    includes: "Ulkopesu",
+    icon: "shield",
+    image: "https://images.unsplash.com/photo-1605164596594-17f7e3120481?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    title: "Premium pesu",
+    description: "Kokonaisvaltainen pesu, joka kattaa auton sisä- ja ulkopinnat.",
+    duration: "1 t",
+    price: "60 €",
+    includes: "Ulkopesu, sisäpuhdistus, imurointi, ikkunat sekä mattojen pesu",
+    icon: "star",
+    image: "https://images.unsplash.com/photo-1550564956-8f914edc0477?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    title: "Shock Pesu",
+    description: "Täydellinen pesu ja käsittely, joka palauttaa autosi alkuperäisen kiillon.",
+    duration: "1 t",
+    price: "170 €",
+    includes: "Ulkopesu, myllytys, kovavahaus",
+    icon: "zap",
+    image: "https://images.unsplash.com/photo-1620323945317-93167ade7da8?q=80&w=3040&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    title: "Renkaiden vaihto",
+    description: "Nopea ja ammattitaitoinen renkaiden vaihto.",
+    duration: "20 min",
+    price: "30 €",
+    includes: "",
+    icon: "refresh-cw",
+    image: "https://images.unsplash.com/photo-1565534384095-5d329610fa16?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    title: "Renkaiden vaihto ja pesu",
+    description: "Renkaiden vaihto ja pesu samalla käynnillä.",
+    duration: "20 min",
+    price: "55 €",
+    includes: "Ulkopesu, renkaiden vaihto, renkaiden pesu",
+    icon: "refresh-cw",
+    image: "https://images.unsplash.com/photo-1605164596594-17f7e3120481?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    title: "Renkaiden pesu",
+    description: "Renkaiden ja vanteiden perusteellinen puhdistus.",
+    duration: "10 min",
+    price: "10 €",
+    includes: "",
+    icon: "circle",
+    image: "https://images.unsplash.com/photo-1550564956-8f914edc0477?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    title: "Kausi 1",
+    description: "Täydellinen kausihuolto autollesi.",
+    duration: "1 t",
+    price: "208 €",
+    includes: "Käsinpesu, kovavahaus, myllytys, maalipinnan kiillotus",
+    icon: "calendar",
+    image: "https://images.unsplash.com/photo-1620323945317-93167ade7da8?q=80&w=3040&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    title: "NANOPINNOITE 12KK",
+    description: "Pitkäkestoinen nanopinnoite suojaa autoasi jopa 12 kuukautta.",
+    duration: "2 t",
+    price: "139 €",
+    includes: "",
+    icon: "shield",
+    image: "https://images.unsplash.com/photo-1565534384095-5d329610fa16?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    title: "Kausi 2",
+    description: "Kausittainen huolto ja renkaiden vaihto.",
+    duration: "1 t",
+    price: "55 €",
+    includes: "Renkaiden vaihto ja pesu, paineen tarkistus sekä käsinpesu vahashampoo",
+    icon: "calendar",
+    image: "https://images.unsplash.com/photo-1605164596594-17f7e3120481?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    title: "Talvipesu",
+    description: "Talviolosuhteisiin suunniteltu pesu, joka poistaa tiesuolan ja lian.",
+    duration: "40 min",
+    price: "50 €",
+    includes: "Liuotinpesu, kevytvahapesu, mattojenpesu, ovenvälit, tuulilasinpesu",
+    icon: "cloud-snow",
+    image: "https://images.unsplash.com/photo-1550564956-8f914edc0477?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    title: "Refresh",
+    description: "Nopea raikastus ja puhdistus autollesi.",
+    duration: "40 min",
+    price: "50 €",
+    includes: "Liuotinpesu, kevytvahapesu, mattojenpesu, ovenvälit, tuulilasinpesu",
+    icon: "refresh-cw",
+    image: "https://images.unsplash.com/photo-1620323945317-93167ade7da8?q=80&w=3040&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    title: "Kovavahaus Tarjous",
+    description: "Erikoistarjous: Kovavahaus ja ulkopesu edulliseen hintaan.",
+    duration: "1 t",
+    price: "99 €",
+    includes: "Ulkopesu + kovavahaus (norm. 130€)",
+    icon: "tag",
+    image: "https://images.unsplash.com/photo-1565534384095-5d329610fa16?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }
+];
+---
+
+<section id="palvelut" class="services">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Palvelumme</h2>
+      <p>Laadukasta autopesua jokaiseen tarpeeseen</p>
+    </div>
+    
+    <div class="services-slider-container">
+      <!-- Mobile swipe instruction -->
+      <div class="swipe-instruction">
+        <div class="swipe-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12h4v-2l6-6v16l-6-6v-2H1"></path>
+            <path d="M23 12h-4v-2l-6-6v16l6-6v-2h4"></path>
+          </svg>
+        </div>
+        <span>Pyyhkäise nähdäksesi lisää palveluita</span>
+      </div>
+      
+      <div class="slider-controls">
+        <button class="slider-arrow prev-arrow" aria-label="Edellinen palvelu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button class="slider-arrow next-arrow" aria-label="Seuraava palvelu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="services-track-container">
+        <div class="services-track">
+          {services.map((service, index) => (
+            <div class="service-card" data-index={index}>
+              <div class="service-image">
+                <img src={service.image} alt={service.title} loading="lazy" />
+                <div class="service-overlay"></div>
+                <div class="service-badge">
+                  <span class="service-price">{service.price}</span>
+                </div>
+                <div class="service-icon">
+                  {service.icon === "tool" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                    </svg>
+                  )}
+                  {service.icon === "star" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  )}
+                  {service.icon === "shield" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                  )}
+                  {service.icon === "home" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                      <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                  )}
+                  {service.icon === "wind" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path>
+                    </svg>
+                  )}
+                  {service.icon === "zap" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                  )}
+                  {service.icon === "refresh-cw" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="23 4 23 10 17 10"></polyline>
+                      <polyline points="1 20 1 14 7 14"></polyline>
+                      <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                    </svg>
+                  )}
+                  {service.icon === "circle" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                  )}
+                  {service.icon === "calendar" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                  )}
+                  {service.icon === "cloud-snow" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25"></path>
+                      <line x1="8" y1="16" x2="8.01" y2="16"></line>
+                      <line x1="8" y1="20" x2="8.01" y2="20"></line>
+                      <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                      <line x1="12" y1="22" x2="12.01" y2="22"></line>
+                      <line x1="16" y1="16" x2="16.01" y2="16"></line>
+                      <line x1="16" y1="20" x2="16.01" y2="20"></line>
+                    </svg>
+                  )}
+                  {service.icon === "tag" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                      <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                    </svg>
+                  )}
+                  {service.icon === "layers" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                      <polyline points="2 17 12 22 22 17"></polyline>
+                      <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                  )}
+                </div>
+              </div>
+              <div class="service-content">
+                <h3>{service.title}</h3>
+                <div class="service-meta">
+                  <span class="service-duration">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    {service.duration}
+                  </span>
+                </div>
+                <p class="service-description">{service.description}</p>
+                {service.includes && 
+                  <div class="service-includes">
+                    <span>Sisältää:</span>
+                    <p>{service.includes}</p>
+                  </div>
+                }
+                <a href="https://nokianautopesu.setmore.com/" class="btn service-btn" target="_blank" rel="noopener noreferrer">
+                  <span>Varaa aika</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      <div class="slider-pagination">
+        <div class="pagination-track">
+          {services.map((_, index) => (
+            <button class={`pagination-dot ${index === 0 ? 'active' : ''}`} data-index={index} aria-label={`Siirry palveluun ${index + 1}`}></button>
+          ))}
+        </div>
+      </div>
+    </div>
+    
+    <div class="service-info">
+      <div class="info-box">
+        <div class="info-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+        </div>
+        <h4>Miksi valita käsinpesu?</h4>
+        <p>Käsinpesu on hellävarainen tapa puhdistaa auto perusteellisesti. Ammattilaisemme kiinnittävät huomiota jokaiseen yksityiskohtaan ja käyttävät vain laadukkaita, auton pintaa suojaavia pesuaineita.</p>
+      </div>
+      
+      <div class="info-box">
+        <div class="info-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <path d="M9.1 12a2.1 2.1 0 0 1 0 2.2"></path>
+            <path d="M14.9 12a2.1 2.1 0 0 0 0 2.2"></path>
+            <path d="M8 14.5c1 2.5 8 2.5 9 0"></path>
+          </svg>
+        </div>
+        <h4>Ympäristöystävällinen valinta</h4>
+        <p>Käytämme biohajoavia pesuaineita ja vettä säästäviä menetelmiä. Kaikki jätevedet käsitellään asianmukaisesti, joten voit pestä autosi hyvällä omallatunnolla.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.services-track');
+    const cards = Array.from(document.querySelectorAll('.service-card'));
+    const dots = Array.from(document.querySelectorAll('.pagination-dot'));
+    const prevButton = document.querySelector('.prev-arrow');
+    const nextButton = document.querySelector('.next-arrow');
+    const swipeInstruction = document.querySelector('.swipe-instruction');
+    const paginationTrack = document.querySelector('.pagination-track');
+    
+    if (!track || !cards.length || !dots.length || !prevButton || !nextButton) return;
+    
+    let currentIndex = 0;
+    let startX, moveX, initialPosition, currentTranslate = 0;
+    let isDragging = false;
+    let animationID = 0;
+    let cardWidth = cards[0].offsetWidth;
+    let gap = 24; // Increased gap value
+    let visibleCards = getVisibleCardsCount();
+    let maxIndex = Math.max(0, cards.length - visibleCards);
+    let autoplayPaused = false;
+    
+    // Calculate the gap between cards
+    if (cards.length > 1) {
+      const style = window.getComputedStyle(track);
+      gap = parseInt(style.columnGap || style.gap || '24', 10);
+    }
+    
+    // Calculate how many cards are visible at once based on viewport
+    function getVisibleCardsCount() {
+      const viewportWidth = window.innerWidth;
+      if (viewportWidth >= 1200) return 3;
+      if (viewportWidth >= 768) return 2;
+      return 1;
+    }
+    
+    // Set initial position
+    updateSliderPosition();
+    
+    // Hide swipe instruction after a few seconds
+    setTimeout(() => {
+      if (swipeInstruction) {
+        swipeInstruction.classList.add('fade-out');
+        setTimeout(() => {
+          swipeInstruction.style.display = 'none';
+        }, 500);
+      }
+    }, 4000);
+    
+    // Update card width, visible cards, and max index on window resize
+    window.addEventListener('resize', () => {
+      cardWidth = cards[0].offsetWidth;
+      visibleCards = getVisibleCardsCount();
+      maxIndex = Math.max(0, cards.length - visibleCards);
+      
+      // Ensure current index is valid after resize
+      if (currentIndex > maxIndex) {
+        currentIndex = maxIndex;
+      }
+      
+      updateSliderPosition();
+      updateActiveDot();
+      updatePaginationScroll();
+    });
+    
+    // Navigation buttons
+    prevButton.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateSliderPosition();
+        updateActiveDot();
+        updatePaginationScroll();
+      }
+    });
+    
+    nextButton.addEventListener('click', () => {
+      if (currentIndex < maxIndex) {
+        currentIndex++;
+        updateSliderPosition();
+        updateActiveDot();
+        updatePaginationScroll();
+      }
+    });
+    
+    // Pagination dots
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        // Limit index to maxIndex
+        currentIndex = Math.min(index, maxIndex);
+        updateSliderPosition();
+        updateActiveDot();
+        updatePaginationScroll();
+      });
+    });
+    
+    // Touch events for mobile swipe
+    track.addEventListener('touchstart', touchStart, { passive: true });
+    track.addEventListener('touchmove', touchMove, { passive: false });
+    track.addEventListener('touchend', touchEnd);
+    
+    // Mouse events for desktop drag
+    track.addEventListener('mousedown', touchStart);
+    window.addEventListener('mousemove', touchMove);
+    window.addEventListener('mouseup', touchEnd);
+    window.addEventListener('mouseleave', touchEnd);
+    
+    function touchStart(event) {
+      pauseAutoplay();
+      const touch = event.type.includes('mouse') ? event : event.touches[0];
+      startX = touch.clientX;
+      isDragging = true;
+      initialPosition = currentTranslate;
+      
+      // Add grabbing cursor
+      track.style.cursor = 'grabbing';
+      
+      cancelAnimationFrame(animationID);
+    }
+    
+    function touchMove(event) {
+      if (!isDragging) return;
+      
+      // Prevent page scrolling when dragging horizontally
+      if (event.type === 'touchmove') {
+        event.preventDefault();
+      }
+      
+      const touch = event.type.includes('mouse') ? event : event.touches[0];
+      moveX = touch.clientX;
+      
+      const diff = moveX - startX;
+      currentTranslate = initialPosition + diff;
+      
+      // Add resistance at the edges
+      if (currentTranslate > 0) {
+        currentTranslate = currentTranslate * 0.3;
+      } else if (currentTranslate < -(maxIndex * (cardWidth + gap))) {
+        const overscroll = currentTranslate + (maxIndex * (cardWidth + gap));
+        currentTranslate = -(maxIndex * (cardWidth + gap)) + (overscroll * 0.3);
+      }
+      
+      animationID = requestAnimationFrame(() => {
+        track.style.transform = `translateX(${currentTranslate}px)`;
+      });
+    }
+    
+    function touchEnd() {
+      isDragging = false;
+      cancelAnimationFrame(animationID);
+      
+      // Reset cursor
+      track.style.cursor = 'grab';
+      
+      const movedBy = currentTranslate - initialPosition;
+      
+      // If moved more than 20% of card width, change slide
+      if (Math.abs(movedBy) > cardWidth * 0.2) {
+        if (movedBy < 0 && currentIndex < maxIndex) {
+          currentIndex++;
+        } else if (movedBy > 0 && currentIndex > 0) {
+          currentIndex--;
+        }
+      }
+      
+      updateSliderPosition();
+      updateActiveDot();
+      updatePaginationScroll();
+      
+      // Resume autoplay after a delay
+      setTimeout(resumeAutoplay, 5000);
+    }
+    
+    function updateSliderPosition() {
+      currentTranslate = -currentIndex * (cardWidth + gap);
+      track.style.transform = `translateX(${currentTranslate}px)`;
+      
+      // Update button states
+      prevButton.disabled = currentIndex === 0;
+      nextButton.disabled = currentIndex === maxIndex;
+      
+      // Add visual indication for disabled buttons
+      prevButton.classList.toggle('disabled', currentIndex === 0);
+      nextButton.classList.toggle('disabled', currentIndex === maxIndex);
+    }
+    
+    function updateActiveDot() {
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+    
+    function updatePaginationScroll() {
+      if (!paginationTrack) return;
+      
+      // Calculate dot width including margin
+      const dotWidth = dots[0].offsetWidth + 8;
+      
+      // Calculate center position
+      const containerWidth = paginationTrack.parentElement.offsetWidth;
+      const scrollPosition = (currentIndex * dotWidth) - (containerWidth / 2) + (dotWidth / 2);
+      
+      paginationTrack.scrollLeft = scrollPosition;
+    }
+    
+    // Auto-advance slider every 5 seconds
+    let autoplayInterval;
+    
+    function startAutoplay() {
+      autoplayInterval = setInterval(() => {
+        if (autoplayPaused) return;
+        
+        if (currentIndex < maxIndex) {
+          currentIndex++;
+        } else {
+          currentIndex = 0;
+        }
+        updateSliderPosition();
+        updateActiveDot();
+        updatePaginationScroll();
+      }, 5000);
+    }
+    
+    function pauseAutoplay() {
+      autoplayPaused = true;
+      clearInterval(autoplayInterval);
+    }
+    
+    function resumeAutoplay() {
+      autoplayPaused = false;
+      startAutoplay();
+    }
+    
+    // Start autoplay
+    startAutoplay();
+    
+    // Pause autoplay on interaction
+    track.addEventListener('mouseenter', pauseAutoplay);
+    track.addEventListener('touchstart', pauseAutoplay);
+    prevButton.addEventListener('mouseenter', pauseAutoplay);
+    nextButton.addEventListener('mouseenter', pauseAutoplay);
+    
+    // Add focus/blur events for accessibility
+    cards.forEach(card => {
+      card.addEventListener('focus', pauseAutoplay);
+      card.addEventListener('blur', resumeAutoplay);
+    });
+    
+    // Add keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (document.activeElement.closest('.services-track')) {
+        if (e.key === 'ArrowLeft' && currentIndex > 0) {
+          currentIndex--;
+          updateSliderPosition();
+          updateActiveDot();
+          updatePaginationScroll();
+        } else if (e.key === 'ArrowRight' && currentIndex < maxIndex) {
+          currentIndex++;
+          updateSliderPosition();
+          updateActiveDot();
+          updatePaginationScroll();
+        }
+      }
+    });
+    
+    // Add intersection observer to pause autoplay when slider is not visible
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          resumeAutoplay();
+        } else {
+          pauseAutoplay();
+        }
+      });
+    }, { threshold: 0.3 });
+    
+    observer.observe(track.parentElement);
+  });
+</script>
+
+<style>
+  .services {
+    background-color: var(--color-light);
+    padding: 5rem 0;
+    overflow: hidden;
+  }
+  
+  .services-slider-container {
+    position: relative;
+    margin: 3rem 0;
+    padding: 0;
+  }
+  
+  /* Swipe instruction overlay */
+  .swipe-instruction {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    z-index: 100;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    backdrop-filter: blur(4px);
+  }
+  
+  .swipe-instruction.fade-out {
+    opacity: 0;
+  }
+  
+  .swipe-icon {
+    display: flex;
+    align-items: center;
+  }
+  
+  .swipe-icon svg {
+    width: 24px;
+    height: 24px;
+    animation: swipeAnimation 1.5s infinite;
+  }
+  
+  @keyframes swipeAnimation {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.9);
+      opacity: 0.5;
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(var(--color-primary-rgb), 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(var(--color-primary-rgb), 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(var(--color-primary-rgb), 0);
+    }
+  }
+  
+  .services-track-container {
+    overflow: hidden;
+    margin: 0;
+    padding: 1.5rem 0;
+    cursor: grab;
+  }
+  
+  .services-track-container:active {
+    cursor: grabbing;
+  }
+  
+  .services-track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+    padding: 1rem 0;
+  }
+  
+  .service-card {
+    flex: 0 0 auto;
+    width: calc(100% - 24px);
+    max-width: 380px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  @media (min-width: 768px) {
+    .service-card {
+      width: calc(50% - 24px);
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .service-card {
+      width: calc(33.333% - 24px);
+    }
+  }
+  
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  }
+  
+  .service-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+  }
+  
+  .service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  .service-card:hover .service-image img {
+    transform: scale(1.1);
+  }
+  
+  .service-card:hover .service-overlay {
+    opacity: 0.4;
+  }
+  
+  .service-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    transition: all 0.3s ease;
+  }
+  
+  .service-card:hover .service-badge {
+    transform: scale(1.05);
+    background-color: var(--color-accent);
+  }
+  
+  .service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background-color: white;
+    border-radius: 50%;
+    color: var(--color-primary);
+    position: absolute;
+    bottom: -28px;
+    left: 24px;
+    transform: translateY(0);
+    border: 3px solid white;
+    z-index: 2;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-card:hover .service-icon {
+    transform: translateY(-5px) rotate(360deg);
+    background-color: var(--color-primary);
+    color: white;
+  }
+  
+  .service-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .service-content {
+    padding: 2rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+  }
+  
+  .service-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-dark);
+    transition: color 0.3s ease;
+  }
+  
+  .service-card:hover h3 {
+    color: var(--color-primary);
+  }
+  
+  .service-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .service-duration {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    color: var(--color-gray-dark);
+    background-color: rgba(var(--color-primary-rgb), 0.08);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .service-card:hover .service-duration {
+    background-color: rgba(var(--color-primary-rgb), 0.15);
+  }
+  
+  .service-duration svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .service-description {
+    margin-bottom: 1.2rem;
+    color: var(--color-gray-dark);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    flex-grow: 1;
+  }
+  
+  .service-includes {
+    background-color: rgba(var(--color-primary-rgb), 0.05);
+    border-radius: 12px;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.2rem;
+    border-left: 3px solid var(--color-primary);
+    transition: all 0.3s ease;
+  }
+  
+  .service-card:hover .service-includes {
+    background-color: rgba(var(--color-primary-rgb), 0.08);
+    transform: translateX(5px);
+  }
+  
+  .service-includes span {
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  
+  .service-includes p {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  
+  .service-btn {
+    align-self: flex-start;
+    margin-top: auto;
+    background-color: var(--color-primary);
+    color: white;
+    transition: all 0.3s ease;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .service-btn svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-btn:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(var(--color-primary-rgb), 0.3);
+  }
+  
+  .service-btn:hover svg {
+    transform: translateX(3px);
+  }
+  
+  .service-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  
+  .service-btn:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  
+  /* Slider controls */
+  .slider-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 10;
+    padding: 0 1rem;
+  }
+  
+  .slider-arrow {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    pointer-events: auto;
+    color: var(--color-primary);
+  }
+  
+  .slider-arrow svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  .slider-arrow:hover {
+    background-color: var(--color-primary);
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  .prev-arrow:hover svg {
+    transform: translateX(-3px);
+  }
+  
+  .next-arrow:hover svg {
+    transform: translateX(3px);
+  }
+  
+  .slider-arrow.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #f5f5f5;
+    color: #ccc;
+    transform: scale(0.9);
+  }
+  
+  .slider-arrow.disabled:hover {
+    background-color: #f5f5f5;
+    color: #ccc;
+    transform: scale(0.9);
+  }
+  
+  /* Pagination */
+  .slider-pagination {
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-top: 1.5rem;
+    padding: 0.5rem 0;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  
+  .slider-pagination::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  
+  .pagination-track {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    min-width: min-content;
+    transition: transform 0.3s ease;
+  }
+  
+  .pagination-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+  }
+  
+  .pagination-dot.active {
+    background-color: var(--color-primary);
+    transform: scale(1.3);
+  }
+  
+  .pagination-dot:hover {
+    background-color: var(--color-accent);
+  }
+  
+  /* Info boxes */
+  .service-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+  
+  .info-box {
+    background-color: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+  }
+  
+  .info-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--color-primary);
+    transition: all 0.3s ease;
+  }
+  
+  .info-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-box:hover::before {
+    width: 8px;
+  }
+  
+  .info-box .info-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(var(--color-primary-rgb), 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+  }
+  
+  .info-box:hover .info-icon {
+    background-color: var(--color-primary);
+    color: white;
+    transform: scale(1.1) rotate(10deg);
+  }
+  
+  .info-box .info-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .info-box h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+    transition: color 0.3s ease;
+  }
+  
+  .info-box:hover h4 {
+    color: var(--color-primary);
+  }
+  
+  .info-box p {
+    color: var(--color-gray-dark);
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .service-info {
+      grid-template-columns: 1fr;
+    }
+    
+    .slider-controls {
+      position: relative;
+      top: auto;
+      transform: none;
+      margin-top: 1.5rem;
+      justify-content: center;
+      gap: 1rem;
+    }
+    
+    .service-card {
+      height: auto;
+      min-height: 450px;
+    }
+    
+    .service-badge {
+      top: 12px;
+      right: 12px;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+    
+    .service-icon {
+      width: 50px;
+      height: 50px;
+      bottom: -25px;
+      left: 20px;
+    }
+    
+    .service-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+    
+    .service-content {
+      padding: 1.8rem 1.2rem 1.2rem;
+    }
+    
+    .service-content h3 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .service-image {
+      height: 180px;
+    }
+    
+    .slider-arrow {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .slider-arrow svg {
+      width: 20px;
+      height: 20px;
+    }
+    
+    .service-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>

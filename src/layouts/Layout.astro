@@ -1,0 +1,151 @@
+---
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="fi">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description}>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--color-primary: #0066cc;
+		--color-primary-rgb: 0, 102, 204;
+		--color-secondary: #004d99;
+		--color-accent: #ff9900;
+		--color-dark: #1a1a1a;
+		--color-text: #333333;
+		--color-light: #ffffff;
+		--color-background: #f5f7fa;
+		--color-gray: #f0f0f0;
+		--color-gray-dark: #666666;
+		
+		--border-radius: 8px;
+		--box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+		--transition: all 0.3s ease;
+	}
+	
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	
+	html {
+		font-family: 'Poppins', sans-serif;
+		scroll-behavior: smooth;
+	}
+	
+	body {
+		color: var(--color-text);
+		background-color: var(--color-background);
+		line-height: 1.6;
+	}
+	
+	a {
+		color: inherit;
+		text-decoration: none;
+		transition: var(--transition);
+	}
+	
+	img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+	
+	.container {
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1.5rem;
+	}
+	
+	section {
+		padding: 5rem 0;
+	}
+	
+	.section-heading {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+	
+	.section-heading h2 {
+		font-size: 2.5rem;
+		color: var(--color-dark);
+		margin-bottom: 0.5rem;
+		position: relative;
+		display: inline-block;
+	}
+	
+	.section-heading h2::after {
+		content: '';
+		position: absolute;
+		bottom: -10px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80px;
+		height: 3px;
+		background-color: var(--color-primary);
+	}
+	
+	.section-heading p {
+		color: var(--color-gray-dark);
+		font-size: 1.1rem;
+	}
+	
+	.btn {
+		display: inline-block;
+		background-color: var(--color-primary);
+		color: white;
+		padding: 0.75rem 1.5rem;
+		border-radius: var(--border-radius);
+		font-weight: 500;
+		cursor: pointer;
+		border: none;
+		transition: var(--transition);
+		text-align: center;
+	}
+	
+	.btn:hover {
+		background-color: var(--color-secondary);
+		transform: translateY(-3px);
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+	}
+	
+	.btn-primary {
+		background-color: var(--color-primary);
+		color: white;
+	}
+	
+	.hidden {
+		display: none !important;
+	}
+	
+	@media (max-width: 768px) {
+		.section-heading h2 {
+			font-size: 2rem;
+		}
+		
+		section {
+			padding: 4rem 0;
+		}
+	}
+</style>

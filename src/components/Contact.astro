@@ -1,0 +1,325 @@
+---
+---
+
+<section id="yhteystiedot" class="contact">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Yhteystiedot</h2>
+      <p>Ota yhteyttä tai tule käymään</p>
+    </div>
+    
+    <div class="contact-content">
+      <div class="contact-info">
+        <h3>Löydät meidät</h3>
+        <div class="info-items">
+          <div class="info-item">
+            <span class="info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </span>
+            <div>
+              <strong>Osoite</strong>
+              <p>Pikkukorventie 34 F, 37150 Nokia</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <span class="info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </span>
+            <div>
+              <strong>Puhelin</strong>
+              <p><a href="tel:+358401234567">040 123 4567</a></p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <span class="info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </span>
+            <div>
+              <strong>Sähköposti</strong>
+              <p><a href="mailto:info@nokianautopesu.fi">info@nokianautopesu.fi</a></p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <span class="info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </span>
+            <div>
+              <strong>Aukioloajat</strong>
+              <p>Ma-Pe: 8:00 - 18:00</p>
+              <p>La: 9:00 - 16:00</p>
+              <p>Su: Suljettu</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="location-image">
+          <img src="https://images.unsplash.com/photo-1608506375591-b90e1f955e4b?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        </div>
+      </div>
+      
+      <div class="contact-form-container">
+        <button id="contact-form-toggle" class="btn btn-primary">Ota yhteyttä</button>
+        
+        <div id="contact-form-wrapper" class="hidden">
+          <h3>Ota yhteyttä</h3>
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Nimi</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Sähköposti</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Puhelinnumero</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+              <label for="service">Palvelu</label>
+              <select id="service" name="service">
+                <option value="">Valitse palvelu...</option>
+                <option value="peruspesu">Peruspesu</option>
+                <option value="premium">Premium-pesu</option>
+                <option value="tayspesu">Täyspesu</option>
+                <option value="muu">Muu palvelu</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Viesti</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <div class="form-actions">
+              <button type="submit" class="btn">Lähetä viesti</button>
+              <button type="button" id="cancel-form" class="btn btn-outline">Peruuta</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    background-color: var(--color-background);
+  }
+  
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  
+  .contact-info, .contact-form-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .contact-info h3, .contact-form-container h3 {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+  }
+  
+  .info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .info-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(var(--color-primary-rgb), 0.1);
+    border-radius: 50%;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+  }
+  
+  .info-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .info-item:hover .info-icon {
+    background-color: var(--color-primary);
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  .location-image {
+    margin-top: 2rem;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .location-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  
+  .location-image:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Form styles */
+  .contact-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #contact-form-toggle {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  #contact-form-toggle:hover {
+    transform: translateY(-3px);
+  }
+  
+  #contact-form-wrapper {
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  #contact-form-wrapper.hidden {
+    display: none;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .form-actions button {
+    flex: 1;
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+  }
+  
+  .btn-outline:hover {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-form-container {
+      order: 2;
+    }
+    
+    .contact-info {
+      order: 1;
+    }
+  }
+</style>
+
+<script>
+  // Toggle contact form visibility
+  const contactFormToggle = document.getElementById('contact-form-toggle');
+  const contactFormWrapper = document.getElementById('contact-form-wrapper');
+  const cancelForm = document.getElementById('cancel-form');
+  
+  if (contactFormToggle && contactFormWrapper) {
+    contactFormToggle.addEventListener('click', () => {
+      contactFormWrapper.classList.remove('hidden');
+      contactFormToggle.classList.add('hidden');
+    });
+  }
+  
+  if (cancelForm && contactFormWrapper && contactFormToggle) {
+    cancelForm.addEventListener('click', () => {
+      contactFormWrapper.classList.add('hidden');
+      contactFormToggle.classList.remove('hidden');
+    });
+  }
+  
+  // Form validation and handling
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // In a real implementation, you would send this data to a server
+      // For now, we'll just show an alert
+      alert('Kiitos viestistäsi! Olemme sinuun yhteydessä pian.');
+      contactForm.reset();
+      
+      // Hide form after submission
+      if (contactFormWrapper && contactFormToggle) {
+        contactFormWrapper.classList.add('hidden');
+        contactFormToggle.classList.remove('hidden');
+      }
+    });
+  }
+</script>
